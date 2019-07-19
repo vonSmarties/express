@@ -1,0 +1,11 @@
+<h1>{{ stitle}}</h1>
+<h2>Express App : {{title}}</h2><br>
+<select name="exos">
+  {{#each exos}}
+    {{#compare this.libelle 'exo4' operator='=='}}
+      <option value="{{this._id}}" selected>{{this.libelle}}</option>
+    {{else}}
+      <option value="{{this._id}}">{{this.libelle}}</option>
+    {{/compare}}
+  {{/each}}
+</select>
